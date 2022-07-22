@@ -1,6 +1,10 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly GRAPHCMS_URI: string
-  // more env variables...
+  readonly VITE_GRAPHCMS_URI: string
+  readonly VITE_API_ACCESS_TOKEN: SVGAnimatedString
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
 }
