@@ -3,6 +3,8 @@ import { useInput } from 'react-hanger'
 import { gql, useMutation } from '@apollo/client'
 import { useNavigate } from 'react-router-dom'
 
+import mockup from '/src/assets/mockup.png'
+
 const CREATE_SUBSCRIBER_MUTATION = gql`
   mutation CreateSubscriber($name: String!, $email: String!) {
     createSubscriber(data: { name: $name, email: $email }) {
@@ -69,7 +71,7 @@ export function Subscribe() {
           </form>
         </div>
       </div>
-      <img src="/src/assets/mockup.png" className="mt-10" alt="" />
+      <img src={mockup} className="mt-10" alt="" />
     </div>
   )
 }
