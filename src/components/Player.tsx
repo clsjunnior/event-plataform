@@ -1,10 +1,10 @@
+import { useRef } from 'react'
 import { CaretRight, DiscordLogo, FileArrowDown, Image, Lightning } from 'phosphor-react'
 import { Player as VimePlayer, Youtube, DefaultUi } from '@vime/react'
 import { gql, useQuery } from '@apollo/client'
 import Button from './Button'
 
 import '@vime/core/themes/default.css'
-import { useEffect, useRef } from 'react'
 
 interface PlayerProps {
   lessonSlug: string
@@ -48,14 +48,6 @@ export function Player(props: PlayerProps) {
       slug: props.lessonSlug,
     },
   })
-
-  console.log(data)
-
-  // useEffect(() => {
-  //   return () => {
-  // 		player.current.rese
-  // 	}
-  // }, [data])
 
   if (!data) {
     return (
